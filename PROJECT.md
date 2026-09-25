@@ -51,7 +51,39 @@ Plain static HTML, CSS and vanilla JS. No build step, no dependencies, no framew
 python3 -m http.server 8765      # then open http://localhost:8765/
 ```
 
-Deploys as-is to Netlify, Vercel, Cloudflare Pages or GitHub Pages.
+Deploys as-is to Vercel, Netlify, Cloudflare Pages or GitHub Pages. Vercel is the
+intended target — see Analytics below.
+
+### Vercel Web Analytics
+
+Wired up in `index.html` with the plain-HTML integration, so there is no package and no
+build step:
+
+```html
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+```
+
+Three things to know:
+
+1. **It must be enabled per-project in the Vercel dashboard** (Analytics → Enable). Until
+   then nothing is collected, however many times the site is deployed.
+2. **It only resolves on Vercel.** Anywhere else — including the local server — the script
+   404s, the stub quietly queues calls that are never sent, and nothing breaks. Verified:
+   no console errors locally.
+3. **It is cookieless**, so the site needs no consent banner for it.
+
+The dashboard also exposes a project-specific path (`/<unique-path>/script.js`) that ad
+blockers are less likely to catch. Swap it in if reporting coverage matters more than
+having a path that works without a dashboard lookup.
+
+Route-level tracking is not available in the HTML integration, which is irrelevant here —
+this is a single page.
+
+Speed Insights is a separate product and is **not** installed. To add it:
+`<script defer src="/_vercel/speed-insights/script.js"></script>`, enabled the same way.
 
 ```
 index.html          601 lines

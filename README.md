@@ -15,7 +15,13 @@ Plain static HTML, CSS and vanilla JS. No build step, no dependencies. Open
 python3 -m http.server 8000
 ```
 
-Deploys as-is to Netlify, Vercel, Cloudflare Pages or GitHub Pages.
+Deploys as-is to Vercel, Netlify, Cloudflare Pages or GitHub Pages. No build command;
+publish directory is the repo root.
+
+**Vercel Web Analytics** is wired into `index.html` and needs enabling once per project in
+the Vercel dashboard (Analytics → Enable). It is cookieless, so no consent banner is
+required, and it silently does nothing when the site is served anywhere other than Vercel.
+Details in `PROJECT.md`.
 
 ```
 index.html

@@ -597,5 +597,17 @@
 </div>
 
 <script src="js/main.js"></script>
+
+<!-- Vercel Web Analytics. Cookieless, so no consent banner is required.
+     Only resolves when the site is served from Vercel and Analytics has been
+     enabled for the project in the dashboard; elsewhere the script 404s and
+     the queue stub below simply collects calls that are never sent. Nothing
+     on the page depends on it.
+     The dashboard also exposes a project-specific path (/<unique-path>/script.js)
+     which ad blockers are less likely to catch — swap it in if coverage matters. -->
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
