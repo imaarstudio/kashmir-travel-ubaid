@@ -119,6 +119,12 @@ video/              hero background film + notes      6.6 MB
 | `--cream` / `--paper` | `#faf7f1` / `#f1eadd` | Alternating section grounds |
 | `--line` | `#e0d6c6` | Borders |
 
+**Tab icon.** `img/favicon.svg` reuses the exact mountain path from the header wordmark,
+saffron on the brand's pine-deep ground, so the tab mark and the logo are the same drawing.
+A 32px PNG covers browsers that don't take SVG favicons and a 180px PNG serves as the iOS
+home-screen tile. The stroke is slightly heavier than the header's (2.8 vs 2) — an optical
+correction so the shape still reads at 16px.
+
 Type: **Fraunces** for headings, **Inter** for body, both from Google Fonts.
 Layout maxes at `1180px`. The palette is warm and editorial on purpose — saffron and pine
 rather than the generic travel-blue, and it commits to one light theme.
