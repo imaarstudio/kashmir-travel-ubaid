@@ -163,8 +163,9 @@ Full provenance and the shot list are in **`img/README.md`**; film sourcing, lic
 encoding notes are in **`video/README.md`**.
 
 Everything currently on the site is **Pexels-licensed** (free commercial use, no
-attribution required) except the hero film, also Pexels. Photo IDs are recorded per file so
-each is traceable.
+attribution required) except the hero film (also Pexels), Ubaid's portrait (his own face,
+AI-replaced background), and `pampore.jpg` (client-supplied, from a third-party retailer —
+rights unverified; see Outstanding #2). Photo IDs are recorded per file so each is traceable.
 
 > **Licensing rule:** assets must be Ubaid's own or properly licensed. Do not take images
 > from hotel listings, booking sites, other agencies, Instagram or image search — those are
@@ -175,7 +176,7 @@ each is traceable.
 | # | Item | Why it matters |
 | --- | --- | --- |
 | 1 | **Hero film is 6.6 MB** | More than twice all 14 photographs combined, on the first screen, for an audience largely on Indian mobile data. macOS `avconvert` has no rate control and can't do better. Fix: download Pexels' **SD** rendition of clip `15276213` and use it untouched (~1.5–2 MB, better looking), or `brew install ffmpeg` and encode properly. |
-| 2 | **`pampore.jpg` contradicts its copy** | The photo is a yellow **mustard** field; the card promises saffron "purple for about three weeks from late October". Either find a saffron-bloom photo or rewrite the card. |
+| 2 | ~~**`pampore.jpg` contradicts its copy**~~ **DONE — licensing to verify** | Replaced with a real purple saffron-crocus harvest photo that matches the "purple… picked by hand" copy. **Source: `buykashmirisaffron.com` (a third-party retailer), supplied by the client, not Pexels.** This is outside the licensing rule below; using it was the client's explicit decision. Confirm Ubaid holds rights (his own shot, purchased, or written permission) before launch, or swap for a Pexels/Wikimedia-licensed equivalent — the exposure lands on him. |
 | 3 | ~~**`ubaid.jpg` is empty**~~ **DONE** | Now filled with a real photo of Ubaid on an AI-replaced Dal Lake background (Gemini watermark cropped off). His actual face, so it doesn't put an invented person on a real owner's site — but the background is generated, worth swapping for a genuine on-location shot if one exists. |
 | 4 | **Name spelling** | Google and the old listing both say **"Kashmir Travell with Ubaid"** (two l's). The site says "Travel". Confirm the trading name; it should match the Business Profile for local SEO. |
 | 5 | **Google hours are now stale** | The profile still shows the old per-day hours (Mon 8–9pm, Thu to 10:30pm, weekends to 11pm). The site and the Maps listing now disagree. |
