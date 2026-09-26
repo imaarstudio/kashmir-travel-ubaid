@@ -176,7 +176,7 @@ each is traceable.
 | --- | --- | --- |
 | 1 | **Hero film is 6.6 MB** | More than twice all 14 photographs combined, on the first screen, for an audience largely on Indian mobile data. macOS `avconvert` has no rate control and can't do better. Fix: download Pexels' **SD** rendition of clip `15276213` and use it untouched (~1.5–2 MB, better looking), or `brew install ffmpeg` and encode properly. |
 | 2 | **`pampore.jpg` contradicts its copy** | The photo is a yellow **mustard** field; the card promises saffron "purple for about three weeks from late October". Either find a saffron-bloom photo or rewrite the card. |
-| 3 | **`ubaid.jpg` is empty** | The caption names him and says he answers the phone himself. It must be a photograph of Ubaid — a stock model would put an invented face on a real owner's site. |
+| 3 | ~~**`ubaid.jpg` is empty**~~ **DONE** | Now filled with a real photo of Ubaid on an AI-replaced Dal Lake background (Gemini watermark cropped off). His actual face, so it doesn't put an invented person on a real owner's site — but the background is generated, worth swapping for a genuine on-location shot if one exists. |
 | 4 | **Name spelling** | Google and the old listing both say **"Kashmir Travell with Ubaid"** (two l's). The site says "Travel". Confirm the trading name; it should match the Business Profile for local SEO. |
 | 5 | **Google hours are now stale** | The profile still shows the old per-day hours (Mon 8–9pm, Thu to 10:30pm, weekends to 11pm). The site and the Maps listing now disagree. |
 | 6 | **Safety copy** | The FAQ answer about travelling in Kashmir should be read and approved by Ubaid in his own words. |
