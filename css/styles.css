@@ -275,8 +275,9 @@ p:last-child{ margin-bottom:0; }
 .hero .eyebrow{ color:var(--saffron-lt); }
 
 .lede{
-  max-width:56ch; font-size:clamp(16px, 1.8vw, 18.5px);
+  max-width:72ch; font-size:clamp(16px, 1.8vw, 18.5px);
   color:rgba(255,255,255,.88); margin-bottom:30px;
+  text-wrap:balance;
 }
 
 .cta-row{ display:flex; flex-wrap:wrap; gap:12px; }
@@ -571,22 +572,6 @@ p:last-child{ margin-bottom:0; }
 .foot-credit{ margin:0; font-size:13.5px; }
 .foot-credit a{ color:var(--saffron-lt); text-decoration-color:rgba(224,145,60,.5); text-underline-offset:3px; }
 
-/* ── sticky mobile call bar ───────────────────────────────────────────── */
-
-.callbar{
-  position:fixed; left:0; right:0; bottom:0; z-index:120;
-  display:none; gap:10px; padding:10px 14px calc(10px + env(safe-area-inset-bottom));
-  background:rgba(250,247,241,.94);
-  backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
-  border-top:1px solid var(--line);
-}
-.callbar-btn{
-  flex:1; text-align:center; padding:13px 10px; border-radius:999px;
-  font-size:15px; font-weight:600; text-decoration:none;
-}
-.callbar-call{ background:var(--saffron); color:#fff; }
-.callbar-wa{ background:var(--pine); color:#fff; }
-
 /* ── reveal on scroll ─────────────────────────────────────────────────── */
 
 .reveal{ opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
@@ -639,7 +624,8 @@ p:last-child{ margin-bottom:0; }
   .foot-inner{ flex-direction:column; align-items:flex-start; }
   .foot-nav{ margin-inline:0; }
 
-  .callbar{ display:flex; }
-  body{ padding-bottom:78px; }
-  .site-head .btn-sm{ padding:9px 15px; font-size:13.5px; }
+  /* header CTA collapses to an icon-only round button */
+  .site-head .btn-sm{ padding:0; width:42px; height:42px; border-radius:999px; gap:0; }
+  .site-head .btn-sm .btn-label{ display:none; }
+  .site-head .btn-sm .ico{ width:18px; height:18px; }
 }
